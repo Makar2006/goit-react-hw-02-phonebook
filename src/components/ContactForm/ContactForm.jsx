@@ -23,22 +23,12 @@ class ContactForm extends Component {
       return;
     }
 
-    if (this.state.contacts.some(contact => contact.name === name)) {
-      alert(`${name} is already in contacts.`);
-      return;
-    }
-
     const contact = {
       id: contactId,
       name,
       number,
     };
-
-    this.setState(prevState => ({
-      contacts: [contact, ...prevState.contacts],
-      name: '',
-      number: '',
-    }));
+    this.props.onSubmit(contact);
   };
 
   render() {
