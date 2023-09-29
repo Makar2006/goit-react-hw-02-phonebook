@@ -1,3 +1,5 @@
+import css from './Filter.module.css';
+
 export const Filter = ({ filter, whenFilterChange }) => {
   return (
     <input
@@ -5,6 +7,7 @@ export const Filter = ({ filter, whenFilterChange }) => {
       placeholder="Search contacts"
       value={filter}
       onChange={whenFilterChange}
+      className={css.filterInput}
     />
   );
 };
