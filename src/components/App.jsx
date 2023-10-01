@@ -25,7 +25,7 @@ class App extends Component {
 
   addCont = newCont => {
     const isDuplicateContact = this.state.contacts.some(
-      contact => contact.name === newCont.name
+      contact => contact.name.toLowerCase() === newCont.name.toLowerCase()
     );
 
     if (isDuplicateContact) {

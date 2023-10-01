@@ -6,8 +6,6 @@ class ContactForm extends Component {
   state = {
     contacts: [],
     filter: '',
-    name: '',
-    number: '',
   };
   whenChange = e => {
     const { name, value } = e.target;
@@ -30,6 +28,7 @@ class ContactForm extends Component {
       number,
     };
     this.props.onSubmit(contact);
+    this.setState({ name: '', number: '' });
   };
 
   render() {
