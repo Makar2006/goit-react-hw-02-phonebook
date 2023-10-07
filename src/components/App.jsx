@@ -8,8 +8,6 @@ class App extends Component {
   state = {
     contacts: [],
     filter: '',
-    name: '',
-    number: '',
   };
 
   whenFilter = e => {
